@@ -17,7 +17,7 @@ public class FileUpload {
         WebElement fileUploadField = driver.findElement(By.id("file-upload-field"));
         fileUploadField.sendKeys("2022_holidays.png");
         System.out.println(fileUploadField.getText());
-       driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+       Thread.sleep(2000);
 
         WebElement resetButton = driver.findElement(By.xpath("//button[normalize-space()='Reset']"));
         resetButton.click();
